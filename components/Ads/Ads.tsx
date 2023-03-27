@@ -45,7 +45,7 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
     }
   });
 
-  const onSubmit: SubmitHandler<IProps>= async (data) => {
+  const onSubmit: SubmitHandler<IItem>= async (data) => {
     const res = await fetch(`https://630f7dc23792563418911561.mockapi.io/ads/${ads.id}`, {
       method: "PUT",
       headers: {
