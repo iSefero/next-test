@@ -66,7 +66,7 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
         </Text>
       </Button>
       :
-      <Flex style={{flexDirection: "column", gap: "10px"}}>
+      <Flex style={styles.buttonWrapper as React.CSSProperties}>
         <Button style={styles.changeButton} onClick={() =>setChangeItem(!changeItem)} variant='solid' colorScheme='green'>
           <Text style={styles.buttonText}>
             {!changeItem ? "Змінити оголошення" : "Відмінити зміни"}
@@ -83,13 +83,13 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
 
   const LinkOrFlex: ({children}: { children: any }) => JSX.Element = ({children}) =>
     pathState ?
-      <Link style={styles.linkComponent} href={`ads/${ads.id}`}>{children}</Link> :
-      <Flex style={styles.linkComponent}>{children}</Flex>;
+      <Link style={styles.linkComponent as React.CSSProperties} href={`ads/${ads.id}`}>{children}</Link> :
+      <Flex style={styles.linkComponent as React.CSSProperties}>{children}</Flex>;
 
   const adsInput =
     <CardBody>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Flex style={styles.inputWrapper}>
+        <Flex style={styles.inputWrapper as React.CSSProperties}>
           <CustomInput
             name="src"
             title="Посилання на картинку продукту"
@@ -131,9 +131,9 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
 
   const adsContent =
     <CardBody >
-      <Flex style={styles.contentWrapper}>
+      <Flex style={styles.contentWrapper  as React.CSSProperties}>
         <Image
-          style={styles.contentImg}
+          style={styles.contentImg  as React.CSSProperties}
           src={ads.src}
           alt='Error while loading image'
           borderRadius='lg'
