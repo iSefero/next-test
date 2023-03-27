@@ -81,7 +81,7 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
         }
       </Flex>;
 
-  const LinkOrFlex: FC<React.ReactNode> = ({children}) =>
+  const LinkOrFlex: ({children}: { children: any }) => JSX.Element = ({children}) =>
     pathState ?
       <Link style={styles.linkComponent} href={`ads/${ads.id}`}>{children}</Link> :
       <Flex style={styles.linkComponent}>{children}</Flex>;
