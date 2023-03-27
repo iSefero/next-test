@@ -66,7 +66,7 @@ export const Ads: FC<IProps> = ({ ads, remove}) => {
         </Text>
       </Button>
       :
-      <Flex style={styles.buttonWrapper}>
+      <Flex style={{flexDirection: "column", gap: "10px"}}>
         <Button style={styles.changeButton} onClick={() =>setChangeItem(!changeItem)} variant='solid' colorScheme='green'>
           <Text style={styles.buttonText}>
             {!changeItem ? "Змінити оголошення" : "Відмінити зміни"}

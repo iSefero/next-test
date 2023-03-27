@@ -17,10 +17,10 @@ export const styles = {
     padding: "20px"
   },
 
-  buttonWrapper: {
-    flexDirection: "column",
-    gap: "10px"
-  },
+  // buttonWrapper: {
+  //   flexDirection: "column",
+  //   gap: "10px"
+  // },
 
   changeButton: {
     width: "100%"
